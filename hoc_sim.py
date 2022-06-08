@@ -1,7 +1,7 @@
 import random
 # You will need to install matplotlib with pip to view coronation histograms!
 import matplotlib.pyplot as plt
-import basicBot
+import basicBot_laolily as bot
 
 ## This is a highly simplified version of Heart of Crown, where a card can only
 ## generate gold, be worth points, or neither. The convention used here is positive
@@ -43,7 +43,7 @@ for iteration in range(1000):
             "points": points,
             "deckPoints": deckPoints
         }
-        result = basicBot.botTurn(field)
+        result = bot.botTurn(field)
         hand = result[0]["hand"]
         deck = result[0]["deck"]
         discard = result[0]["discard"]
@@ -57,5 +57,5 @@ for iteration in range(1000):
         print(log)
     turnCounts.append(turns)
 
-plt.hist(turnCounts, 10)
+plt.hist(turnCounts, [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28])
 plt.show()
