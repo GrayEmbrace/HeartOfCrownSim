@@ -13,7 +13,6 @@ def botTurn(field):
     log = ""
     handGold = 0
     handPoint = 0
-    field["hand"].sort()
     for card in field["hand"]:
         if card > 0:
             handGold += card
@@ -23,6 +22,7 @@ def botTurn(field):
         if handGold >= 6:
             log += "Backed Lulu\nDomain: "
             field["points"] += 6
+            field["hand"].sort()
             for domain in range(3):
                 card = field["hand"].pop()
                 field["domain"].append(card)
@@ -36,7 +36,9 @@ def botTurn(field):
     else:
         if handPoint > 0:
             log += "Scored: "
-            for card in field["hand"]:
+            i = 0
+            while i < len(field["hand"]):
+                card = field["hand"][i]
                 if card < 0:
                     match card:
                         case -2:
@@ -48,7 +50,9 @@ def botTurn(field):
                         case -6:
                             field["points"] += 6
                             log += "Duke "
-                    field["hand"].remove(card)
+                    field["hand"].pop(i)
+                else:
+                    i+=1
             log += "\n"
         else:
             if handGold >= 8:

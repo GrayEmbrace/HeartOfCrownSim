@@ -53,7 +53,7 @@ for iteration in range(1000):
         log += result[1]
         while len(hand) > 0:
             discard.append(hand.pop())
-    if iteration == 15:
+    if turns > 24:
         print(log)
     turnCounts.append(turns)
 
