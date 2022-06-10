@@ -57,5 +57,6 @@ for iteration in range(1000):
         print(log)
     turnCounts.append(turns)
 
+plt.gca().set_ylim([0, 300])
 plt.hist(turnCounts, [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28])
 plt.show()
