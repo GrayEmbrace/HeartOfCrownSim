@@ -15,7 +15,10 @@ for iteration in range(1000):
     ## The standard starting deck has seven Farming Villages and three Apprentice
     ## Maids (represented as 0 since they are worth no gold and we have do not
     ## intend to use their -2 VP value.)
-    deck = [1, 1, 1, 1, 1, 1, 1, 0, 0, 0]
+    deck = ["Farming Village", "Farming Village", "Farming Village",
+            "Farming Village", "Farming Village", "Farming Village",
+            "Farming Village", "Apprentice Maid", "Apprentice Maid",
+            "Apprentice Maid"]
     random.shuffle(deck)
     hand = []
     discard = []
