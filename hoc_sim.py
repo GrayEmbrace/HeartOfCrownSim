@@ -1,7 +1,7 @@
 import random
 # You will need to install matplotlib with pip to view coronation histograms!
 import matplotlib.pyplot as plt
-import basicBot_klam as bot
+import magicLampBot as bot
 
 ## This is a highly simplified version of Heart of Crown, where a card can only
 ## generate gold, be worth points, or neither. The convention used here is positive
